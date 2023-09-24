@@ -9,9 +9,11 @@ export default function Home() {
 
 
             <Suspense fallback={<div>10 seconds Loading...</div>}>
-                <Component/>
+                <Component key={Math.random()} id={String(Math.random())}/>
             </Suspense>
 
         </main>
     )
 }
+
+export const dynamic = 'force-dynamic'
